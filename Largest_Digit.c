@@ -1,24 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int n,d,v[100],k,j,c=0,max;
+    int n,d,a[100],i,j,max;
     scanf("%d",&n);
     while(n!=0)
     {
         d=n%10;
-        v[k]=d;
+        a[i]=d;
         n=n/10;
-        k++;
-        c++;
+        i++;
     }
-    j=k;
     max=0;
-    for(j=0;j<c;j++)
+    for(j=0;j<i;j++)
     {
-       if(v[j]>max)
-       {
-           max=v[j];
-       }
+        if(a[j]>max)
+        {
+            max=a[j];
+        }
     }
     printf("%d",max);
 }
