@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,d,a[100],i,s=0,j,temp,m;
+    scanf("%d",&n);
+    temp=n;
+    while(n>0)
+    {
+        d=n%10;
+        a[i]=d;
+        n=n/10;
+        i++;
+    }
+    m=i;
+    for(j=0;j<i;j++)
+    {
+        s=s+pow(a[j],m);
+        m--;
+    }
+    n=temp;
+    if(n==s)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}
