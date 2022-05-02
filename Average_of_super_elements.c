@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main()
+{
+    int n,a[100],i,c=0,j,k=0,b[100],s=0;
+    float avg;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        c=0;
+        for(j=0;j<n;j++)
+        {
+            if(a[i]==a[j])
+            {
+                c++;
+            }
+        }
+        if(c==a[i])
+        {
+            b[k]=a[i];
+            a[i]=0;
+            k++;
+        }
+    }
+    if(k==0)
+    {
+        printf("-1");
+    }
+    else
+    {
+        for(i=0;i<k;i++)
+        {
+           s=s+b[i];
+        }
+        avg=(float)s/k;
+        printf("%.2f",avg);
+    }
+}
