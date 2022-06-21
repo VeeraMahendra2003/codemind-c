@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int a[100][100],i,j,r,c,s=0,t=0;
+    int a[100][100],i,j,r,c,s=0,k=0;
     scanf("%d%d",&r,&c);
     for(i=0;i<r;i++)
     {
@@ -10,7 +10,7 @@ int main()
             scanf("%d",&a[i][j]);
         }
     }
-    for(i=0;i<r;i++)
+     for(i=0;i<r;i++)
     {
         for(j=0;j<c;j++)
         {
@@ -18,12 +18,11 @@ int main()
             {
                 s=s+a[i][j];
             }
-            else
+            else if(a[i][j]%2!=0)
             {
-                t=t+a[i][j];
+                k=k+a[i][j];
             }
         }
     }
-            printf("%d %d",s,t);
-
+    printf("%d %d",s,k);
 }
